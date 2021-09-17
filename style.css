@@ -18,12 +18,15 @@ body {
 
 .header {
     height: 10vh;
+    width:100vw;
+    position: absolute;
+    top: 0;
 }
 
 .header__title {
     position: absolute;
     left: 0;
-    top: 0;
+    
     padding: 1em;
     text-transform: uppercase;
 }
@@ -32,6 +35,7 @@ body {
     position: absolute;
     top: 0;
     right: 0;
+    width:50vw;
     padding: 1em;
     display: flex;
     text-transform: uppercase;
@@ -40,41 +44,54 @@ body {
 
 .header__nav__a {
     font-size: 0.5em;
+    text-decoration: none;
+    color:white;
+}
+
+.header__nav__a:hover {
+    color:blue;
 }
 
 /* Main */
 main {
     position: absolute;
-    top: 10em;
+    top: 10vh;
     z-index: 4;
     width: 100vw;
     height:50vh;
     display:flex;
     justify-content: center;
-    padding-left:7vw;
-    padding-right:7vh;
+    max-width:60vw;
 }
 
 .main__top__tagline {
     text-transform: uppercase;
+    color:#ffd0ca;
 }
 
 .main__top__p {
-    font-size: 1.7em;
+    width:50vw;
+    font-size: 2.2em;
     font-weight: bold;
 }
 
 .main__section {
     display: flex;
-    justify-content: space-between;
     position: absolute;
-    max-width:90vw;
+    bottom:0;
+    width:90vw;
+    justify-content: space-evenly;
 }
 
 .main__section__small-img {
-    max-width:10vw;
+    width:12vw;
+    height:100%;
 }
 
+.main__section__big-img {
+    width:15vw;
+    height:100%;
+}
 /* Footer */
 footer {
     position: absolute;
@@ -87,10 +104,27 @@ footer {
 
 .footer__section {
     display: flex;
+    justify-content: space-between;
     position: absolute;
     bottom:5vh;
     z-index:4;
     max-width:60vw;
+}
+
+.footer__section__img-up {
+    width:15vw;
+}
+
+.footer__section__img-down {
+    width:15vw;
+}
+
+.footer__section__img-down__img {
+    width:100%;
+}
+
+.footer__section__img-up__img {
+    width:100%;
 }
 
 .footer__section__img-down__h2 {
@@ -105,6 +139,14 @@ footer {
     color: #fc7a5a;
 }
 
+.footer__section__img-up__p {
+    font-size: 0.8em;
+}
+
+.footer__section__img-down__p {
+    font-size: 0.8em;
+}
+
 .footer__p {
     position: absolute;
     bottom: 0;
@@ -116,7 +158,6 @@ footer {
 }
 
 /* Blue waves */
-
 .waves-wrapper1 {
     height:40vh;
     width:100%;
@@ -132,7 +173,7 @@ footer {
     overflow:hidden;
     position: absolute;
     bottom:0;
-    */* Svg is encoded with http://www.asiteaboutnothing.net/c_decode-url.html */
+    /* Svg is encoded with http://www.asiteaboutnothing.net/c_decode-url.html */
     background-image:url("data:image/svg+xml, %3Csvg%20class%3D%22wave1%22%20xmlns%3D%22http%3A%2F%2Fwww.w3.org%2F2000%2Fsvg%22%20viewBox%3D%220%200%20500%20150%22%20preserveAspectRatio%3D%22none%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3Cpath%20fill%3D%20%22%235039eb%22%20fill-opacity%3D%220.33%22%20z-index%3D%221%22%20d%3D%22M0.28%2C3.47%20C207.95%2C4.45%20214.73%2C67.59%20502.54%2C-1.47%20L500.00%2C150.00%20L0.00%2C150.00%20Z%22%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fpath%3E%0A%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%20%3C%2Fsvg%3E%20");
 }
 .wave1 {
